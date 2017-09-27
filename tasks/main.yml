@@ -1,0 +1,35 @@
+---
+
+- name: Add sury php repository
+  apt_repository:
+    repo: 'ppa:ondrej/php'
+  when: ansible_distribution == 'Ubuntu'
+
+- name: Install Sury on Debian
+  block:
+    - name: APT | Update cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+      changed_when: false
+
+    - name: APT | Install sury dependencies
+      apt:
+        name: "{{ item }}"
+        state: present
+      with_items:
+      - apt-transport-https
+      - ca-certificates
+      - lsb-release
+
+    - name: APT_KEY | Install GPG key
+      apt_key:
+        url: "packages.sury.org/apt.gpg"
+        state: present
+
+    - name: APT_REPOSITORY | Add APT repository
+      apt_repository:
+        repo: "deb packages.sury.org {{ ansible_distribution_release }} main"
+
+  when: ansible_distribution == 'Debian'
+...
