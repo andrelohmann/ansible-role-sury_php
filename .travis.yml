@@ -33,9 +33,9 @@ script:
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
   # update
-  - apt-get update
+  - sudo apt-get update
   # install php7.1
-  - apt-get install php7.1 -y
+  - sudo apt-get install php7.1 -y
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
