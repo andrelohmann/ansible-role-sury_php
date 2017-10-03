@@ -5,8 +5,7 @@
     repo: 'ppa:ondrej/php'
   when: ansible_distribution == 'Ubuntu'
 
-- name: Install Sury on Debian
-  block:
+- block:
     - name: APT | Update cache
       apt:
         update_cache: yes
