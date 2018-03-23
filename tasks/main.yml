@@ -22,12 +22,12 @@
 
     - name: APT_KEY | Install GPG key
       apt_key:
-        url: "packages.sury.org/apt.gpg"
+        url: "http://packages.sury.org/php/apt.gpg"
         state: present
 
     - name: APT_REPOSITORY | Add APT repository
       apt_repository:
-        repo: "deb packages.sury.org {{ ansible_distribution_release }} main"
+        repo: "deb http://packages.sury.org/php {{ ansible_distribution_release }} main"
 
   when: ansible_distribution == 'Debian'
 ...
