@@ -15,7 +15,7 @@ Example Playbook
 
     - hosts: php
       roles:
-         - { role: andrelohmann.sury_php }
+         - andrelohmann.sury_php
 
 License
 -------
