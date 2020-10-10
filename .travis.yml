@@ -3,7 +3,7 @@ language: python
 python: "3.6"
 
 sudo: required
-dist: xenial
+dist: bionic
 
 # Install ansible
 addons:
@@ -36,7 +36,7 @@ script:
   # update
   - sudo apt-get update
   # install php7.1
-  - sudo apt-get install php7.2 -y
+  - sudo apt-get install php7.4 -y
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
