@@ -1,0 +1,22 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+
+  - name: Run php --version
+    ansible.builtin.shell: php --version
+    args:
+      executable: /bin/bash
+    register: php_version
+
+  - name: dump php_version
+    ansible.builtin.debug:
+      var: php_version
+
+  - name: Assert php_version to include PHP 8.2.
+    ansible.builtin.assert:
+      that: "'PHP 8.2.' in php_version.stdout"
+...
