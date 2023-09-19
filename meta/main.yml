@@ -4,7 +4,7 @@ galaxy_info:
   author: andrelohmann
   namespace: andrelohmann
   description: ansible galaxy role to install deb.sury.org php repo
-  company: smartformer UG
+  company: CloudSails GmbH
 
   license: MIT
 
