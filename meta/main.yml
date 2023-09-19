@@ -2,19 +2,19 @@
 galaxy_info:
   role_name: sury_php
   author: andrelohmann
+  namespace: andrelohmann
   description: ansible galaxy role to install deb.sury.org php repo
   company: smartformer UG
 
   license: MIT
 
-  min_ansible_version: 2.7
+  min_ansible_version: "2.11"
 
   platforms:
-    - name: Ubuntu
-      versions:
-      - xenial
-      - bionic
-      - focal
+  - name: Ubuntu
+    versions:
+    - focal
+    - jammy
 
   galaxy_tags:
   - php

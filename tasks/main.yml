@@ -1,17 +1,29 @@
 ---
+- name: APT | Install dependencies
+  ansible.builtin.apt:
+    name: "{{ packages }}"
+    state: present
+    dpkg_options: 'force-confnew,force-confdef'
+    autoclean: true
+    autoremove: true
+    update_cache: true
+    cache_valid_time: 3600
+  vars:
+    packages:
+    - software-properties-common
+    - gnupg2
 
-- name: Add sury php repository
-  apt_repository:
+- name: APT | Add sury php repository
+  ansible.builtin.apt_repository:
     repo: 'ppa:ondrej/php'
 
-- name: install packages
-  apt:
+- name: APT | Install packages
+  ansible.builtin.apt:
     name: "{{ sury_php_packages }}"
-    state: latest
+    state: present
     dpkg_options: 'force-confnew,force-confdef'
-    autoclean: yes
-    autoremove: yes
-    update_cache: yes
+    autoclean: true
+    autoremove: true
+    update_cache: true
     cache_valid_time: 3600
-
 ...
