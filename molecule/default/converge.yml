@@ -6,10 +6,8 @@
     - php8.2
     - php8.2-gd
     - php8.2-mysql
-  roles:
-  - andrelohmann.sury_php
   tasks:
-  - name: "Include andrelohmann.apache_php"
+  - name: "Include andrelohmann.sury_php"
     include_role:
-      name: "andrelohmann.apache_php"
+      name: "andrelohmann.sury_php"
 ...
