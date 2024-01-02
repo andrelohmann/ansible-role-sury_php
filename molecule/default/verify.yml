@@ -16,7 +16,7 @@
     ansible.builtin.debug:
       var: php_version
 
-  - name: Assert php_version to include PHP 8.2.
+  - name: Assert php_version to include PHP 8.3.
     ansible.builtin.assert:
-      that: "'PHP 8.2.' in php_version.stdout"
+      that: "'PHP 8.3.' in php_version.stdout"
 ...

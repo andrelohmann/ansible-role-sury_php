@@ -1,4 +1,5 @@
 ---
+
 - name: APT | Install dependencies
   ansible.builtin.apt:
     name: "{{ packages }}"
@@ -26,4 +27,5 @@
     autoremove: true
     update_cache: true
     cache_valid_time: 3600
+
 ...

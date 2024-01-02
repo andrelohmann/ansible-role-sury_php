@@ -3,7 +3,7 @@ galaxy_info:
   role_name: sury_php
   author: andrelohmann
   description: ansible galaxy role to install deb.sury.org php repo
-  company: CloudSails GmbH
+  company: CloudCourse GmbH
 
   license: MIT
 
