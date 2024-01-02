@@ -5,7 +5,7 @@
 
   vars:
     sury_php_packages:
-    - php8.2
+    - php8.3
 
   roles:
   - andrelohmann.root_colored_prompt

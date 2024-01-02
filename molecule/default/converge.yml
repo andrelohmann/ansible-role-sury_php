@@ -3,9 +3,9 @@
   hosts: all
   vars:
     sury_php_packages:
-    - php8.2
-    - php8.2-gd
-    - php8.2-mysql
+    - php8.3
+    - php8.3-gd
+    - php8.3-mysql
   tasks:
   - name: "Include andrelohmann.sury_php"
     include_role:
