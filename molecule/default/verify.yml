@@ -11,8 +11,9 @@
     args:
       executable: /bin/bash
     register: php_version
+    changed_when: false
 
-  - name: dump php_version
+  - name: Dump php_version
     ansible.builtin.debug:
       var: php_version
 
