@@ -2,14 +2,14 @@
 - name: Converge
   hosts: all
   become: true
-  become_method: sudo
+  become_method: ansible.builtin.sudo
   vars:
     sury_php_packages:
     - php8.3
     - php8.3-gd
     - php8.3-mysql
   tasks:
-  - name: "Include andrelohmann.sury_php"
-    include_role:
+  - name: Include andrelohmann.sury_php
+    ansible.builtin.include_role:
       name: "andrelohmann.sury_php"
 ...

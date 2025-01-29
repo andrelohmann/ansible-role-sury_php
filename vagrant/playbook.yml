@@ -1,13 +1,14 @@
 ---
-- hosts: all
+- name: Install
+  hosts: all
   become: true
-  become_method: sudo
+  become_method: ansible.builtin.sudo
 
   vars:
     sury_php_packages:
     - php8.3
 
   roles:
-  - andrelohmann.root_colored_prompt
-  - ansible-role-sury_php
+  - name: andrelohmann.root_colored_prompt
+  - name: ansible-role-sury_php
 ...
